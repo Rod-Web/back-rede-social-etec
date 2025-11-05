@@ -1,0 +1,34 @@
+**Pacotes**
+
+
+**Comandos MySQL**
+
+      .getConnection()    
+            = pega uma conexão temporária do pool.
+
+      .release()
+            = libera a conexão para ser usado em outras instancias.
+
+      .ping()             
+            = verifica se o servidor MySQL está respondendo corretamente
+      
+      .execute(<sql>, <valor) 
+            = executa o comando sql e onde tem o ? substitui pelo valor
+
+      .insertId
+            = pega o id do registro recém-criado após um comando INSERT com chave primária auto increment
+
+
+**Comandos de byscriptjs**
+
+      bcrypt.compare(<senha inputada>, <senha codificada>);
+            = compara a senha inserida com a encriptografada
+
+
+**Comandos JWT**
+
+      jwt.sign(<dados que quer colocar>, <chave secreta>, <objeto com configurações>)
+            = gera um token JWT assinado
+      exemplo: 
+            jwt.sign({rf: user.rf, nome: user.nome,}, JWT_SECRET, {expiresIn: "2h"});
+      
