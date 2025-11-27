@@ -8,14 +8,14 @@ export function tratamentoDadosPostagem(dados) {
     const descricaoTratado = TratamentoDescricao(dados.descricao) // professor escolhe
     const tipoTratado = TratamentoTipoPostagem(dados.tipo) // professor escolhe
     const disciplinaAssociadaTratado = TratamentoDisciplinaAssociada(dados.disciplina) // professor escolhe
-    const autorTratado = 
+    const autorTratado = TratamentoAutor(dados.autor) // pegar o nome do professor logado
     return {
         titulo: tituloTratado,
         descricao: descricaoTratado,
         tipo: tipoTratado,
         // tem que pegar o código da disciplina
         disciplina: disciplinaAssociadaTratado,
-        // tem que pegar o rf do professor
+        // tem que pegar o nome do professor
         autor: autorTratado
         
 
