@@ -1,7 +1,7 @@
-import { TratamentoNome } from "./TratamentosAtributos/global/tratamentoNome.js";
-import { TratamentoSenha } from "./TratamentosAtributos/global/tratamentoSenha.js";
-import { TratamentoTipoDeContato } from "./TratamentosAtributos/global/tratamentoTipoDeContato.js";
-import { TratamentoValorDeContato } from "./TratamentosAtributos/global/tratamentoValorDeContato.js";
+import { TratamentoNome } from "./global/tratamentoNome.js";
+import { TratamentoSenha } from "./global/tratamentoSenha.js";
+import { TratamentoTipoDeContato } from "./global/tratamentoTipoDeContato.js";
+import { TratamentoValorDeContato } from "./global/tratamentoValorDeContato.js";
 
 export async function tratamentoDadosProfessor(dados) {
   const rfTratado = TratamentoRFProfessor(dados.rf);

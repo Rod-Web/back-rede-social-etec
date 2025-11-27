@@ -12,7 +12,6 @@ export function TratamentoDataNascimento(dataNascimento) {
         if (data > hoje) throw new Error("Data de nascimento não pode ser no futuro.");
         console.log("✅ Data de nascimento tratada com sucesso:", dataNascimento);
         return dataNascimento;
-        
     } catch (error) {
         console.error(
             "❌ Erro no tratamento da data de nascimento:",

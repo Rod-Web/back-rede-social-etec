@@ -1,0 +1,3 @@
+export function TratamentoTipoPostagem(tipo) {
+
+}

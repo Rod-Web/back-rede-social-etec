@@ -1,43 +1,15 @@
-// Informações na base de dados:
+import { TratamentoNome } from "./global/tratamentoNome.js";
+import { TratamentoDataNascimento } from "./alunos/tratamentoDataNascimento.js";
+import { CriarSenha } from "./global/tratamentoSenha.js";
 
-// legenda: 
-    // . = atributo inserido do usuário
-    
-    // Dados dos alunos:
-        // . rm - importe local
-        // . nome - importe global
-        // . dataNascimento - importe aluno
-        // . nomeResponsavel - importe aluno
-        // senha - junção do RM + Nome (fazer uma lógica para isso) depois vira hash
-        // idContato - sem tratamento, pega na hora de criar a linha do contato;
+import { TratamentoTipoDeContato } from "./global/tratamentoTipoDeContato.js";
+import { TratamentoValorDeContato } from "./global/tratamentoValorDeContato.js";
 
-    // Dados do contato do aluno:
-        // idAluno - sem tratamento, gerado com autoincremento
-        // . tipo - importe global
-        // . valor - importe global
-
-    // Dados da turma do aluno (averiguar como fazer, a tabela de turma já existe só precisa interligar com a do aluno por meio da fk 
-    // turma :
-        // . turma - importe aluno
-        // . anoLetivo - importe aluno
-        // . turno - importe aluno
-        // anoAtual - pegar do sistema (data atual)
-        // . formacao - importe aluno 
-    // (aluno_turma = tabela associativa)):
-        // . 
-
-import { TratamentoNome } from "./TratamentosAtributos/global/tratamentoNome.js";
-import { TratamentoDataNascimento } from "./TratamentosAtributos/alunos/tratamentoDataNascimento.js";
-import { CriarSenha } from "./TratamentosAtributos/global/tratamentoSenha.js";
-
-import { TratamentoTipoDeContato } from "./TratamentosAtributos/global/tratamentoTipoDeContato.js";
-import { TratamentoValorDeContato } from "./TratamentosAtributos/global/tratamentoValorDeContato.js";
-
-import {TratamentoTurma} from "./TratamentosAtributos/alunos/turma/tratamentoTurma.js";
-import {TratamentoAnoLetivo} from "./TratamentosAtributos/alunos/turma/tratamentoAnoLetivo.js";
-import {TratamentoSerie} from "./TratamentosAtributos/alunos/turma/tratamentoSerie.js";
-import {TratamentoTurno} from "./TratamentosAtributos/alunos/turma/tratamentoTurno.js";
-import {TratamentoFormacao} from "./TratamentosAtributos/alunos/turma/tratamentoFormacao.js";
+import {TratamentoTurma} from "./turma/tratamentoTurma.js";
+import {TratamentoAnoLetivo} from "./turma/tratamentoAnoLetivo.js";
+import {TratamentoSerie} from "./turma/tratamentoSerie.js";
+import {TratamentoTurno} from "./turma/tratamentoTurno.js";
+import {TratamentoFormacao} from "./turma/tratamentoFormacao.js";
 
 export async function tratamentoDadosAluno(dados) {
 

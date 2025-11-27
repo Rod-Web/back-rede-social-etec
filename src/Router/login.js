@@ -17,11 +17,17 @@ Router_Login.post('/', async (req, res) => {
     if (resultado.sucesso) {
       
       res
+      .cookie("token", resultado.token, {
+        httpOnly: true,        // ✅ protege o token contra acesso via JS (segurança contra XSS)
+        secure: true,          // ✅ exige HTTPS (ou localhost em ambiente dev)
+        sameSite: "none",      // ✅ permite envio do cookie entre domínios diferentes
+        path: "/",             // ✅ cookie válido em todo o site
+        maxAge: 2 * 60 * 60 * 1000, // ✅ expira em 2h (igual ao token JWT)
+      })
       .json({
         sucesso: true,
-        token: resultado.token,
-        usuario: resultado.usuario
-      });
+        usuario: resultado.usuario,
+        });
     
     } else {
     
