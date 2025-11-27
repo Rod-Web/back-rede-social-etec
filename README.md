@@ -42,4 +42,4 @@ Criar uma API funcional que permita cadastar e logar usuários, consultar e publ
 ## 🚀 Deploy
 
 O projeto está hospedado em:  
-🔗 [https://backend-qperigo.onrender.com](https://backend-qperigo.onrender.com)
+🔗 
